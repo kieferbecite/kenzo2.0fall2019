@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="reserve.css">
+</head>
+<body>
+
+
+<div class="topnav">
+  <a class="active" href="reserve.html">Reserve Here</a>
+  <a href="menu2.html">Menu</a>
+   <a href="index.html">Home</a>
+   <div class="logo" style="padding-left:16px">
+  <img src="Logo 2.png" width="100" height="100">
+ 
+</div>
+</div>
+
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Reservation</span>
+  </div>
+</div>
+
+<!-- Each of these are text boxes that lead into the Firebase database. Each text box is required and the button below sends it to the database. -->
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;"><form>
+    <h3>Please Enter You Information</h3><br>
+    Please enter your name <input type="text" placeholder="Name" id="name" required = "true"/><br>
+
+    Please enter your phone number <input type="text" placeholder="Phone Number" id="number" required = "true"/><br>
+
+    Please enter your email <input type="text" placeholder="Email" id="email" required = "true"/><br>
+
+    Please enter how many people to reserve for <input type="text" placeholder="Reservation" id="reservation" required = "true"/><br>
+
+    <button type="submit" class="button" onclick="send()">Send</button><br>
+  </form>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCX1wEXRL2n0LYys18QSV6WZum4zGoDhHs",
+    authDomain: "kenzo-79294.firebaseapp.com",
+    databaseURL: "https://kenzo-79294.firebaseio.com",
+    projectId: "kenzo-79294",
+    storageBucket: "kenzo-79294.appspot.com",
+    messagingSenderId: "53451521687",
+    appId: "1:53451521687:web:6e3abf965a1f1513e033d2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="reserve.js"></script>
+
+<!-- This is the footer of our webiste. It contain all the information pertaining to hours and location, and links to social media. Icons were extracted from social media url link.  -->
+<div class="footer">
+<div class="container">
+  <div class="row">
+    <div class="about-company">
+      <h2>Hours of Operation</h2>
+      <p class="text-white-50">Monday - Thursday 12PM - 9PM</p>
+      <p>Saturday - Sunday: 12PM - 11PM</p>
+      <p><a href="https://www.facebook.com/gordonramsay/"><img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png" height="30" width="30"></i></a><a href="https://www.instagram.com/danielandmaxcooks/"><img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png" height="30" width="30"></i></a></p>
+    </div>
+    <div class="location">
+      <h4 class="#">Location:</h4>
+      <p>1 Washington Sq, San Jose, CA 95192</p>
+      <p class="#"><i class="phone"></i>(408) 123 4567</p>
+      <p><i class="email"></i>everybodyeats@gmail.com </p>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="copyright">
+      <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
